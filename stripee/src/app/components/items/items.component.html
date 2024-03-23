@@ -1,0 +1,8 @@
+<div *ngIf="(items$ | async) as items; else loading">
+    <div *ngFor="let item of items">
+        <app-item-show [item] = item></app-item-show>
+    </div>
+</div>
+<ng-template #loading>
+    Cargando productos, espera por favor
+</ng-template>
